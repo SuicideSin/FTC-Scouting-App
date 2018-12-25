@@ -1,5 +1,5 @@
 var data = document.getElementById('match');
-var str = "<table><tr><th>Match Number</th><th bgcolor='#EF3125'>Red 1</th><th bgcolor='#EF3125'>Red 2</th><th bgcolor='#1E59E0'>Blue 1</th><th bgcolor='#1E59E0'>Blue 2</th></tr>";
+var str = "<table id='datatable'><tr><th>Match Number</th><th bgcolor='#EF3125'>Red 1</th><th bgcolor='#EF3125'>Red 2</th><th bgcolor='#1E59E0'>Blue 1</th><th bgcolor='#1E59E0'>Blue 2</th></tr>";
 var arr = [];
 
 function getMatch(matchnumber,alliance){

@@ -102,6 +102,36 @@ router.post('/', function (req, res, next) {
         }
       }
     });
+  } else if (req.body.matchnumber && req.body.alliance && req.body.teamnumber && req.body.teamname && req.body.autoscore && req.body.driverscore && req.body.endscore && req.body.totalscore){
+    User.findById(req.session.userId)
+    .exec(function (error, user) {
+      if (error) {
+        return next(error);
+      } else {
+        if (user != null){
+          var matchData = {
+            username: user.username,
+            matchnumber: req.body.matchnumber,
+            alliance: req.body.alliance,
+            teamnumber: req.body.teamnumber,
+            teamname: req.body.teamname,
+            autoscore: req.body.autoscore,
+            driverscore: req.body.driverscore,
+            endscore: req.body.endscore,
+            totalscore: req.body.totalscore,
+            notes: "",
+          }
+
+          Match.create(matchData, function (error, match) {
+            if (error) {
+              return next(error);
+            } else {
+              return res.redirect('/scouting/scout.html');
+            }
+          });
+        }
+      }
+    });
   } else if (req.body.matchnumber && req.body.alliance){
     User.findById(req.session.userId)
     .exec(function (error, user) {

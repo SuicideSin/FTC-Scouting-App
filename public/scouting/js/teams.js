@@ -1,6 +1,7 @@
 var data = document.getElementById('match');
-var str = "<table><tr><th>Rank</th><th>Team</th><th>Total Score</th><th>Auto Score</th><th>Driver Score</th><th>Endgame Score</th><th>Notes</th></tr>";
+var str = "<table id='datatable'><tr><th>Rank</th><th>Team</th><th>Total Score</th><th>Auto Score</th><th>Driver Score</th><th>Endgame Score</th><th>Notes</th></tr>";
 var arr = [];
+var priorNotes = "";
 
 function getMatch(matchnumber,alliance){
 	var http = new XMLHttpRequest();
@@ -29,11 +30,9 @@ function getMatch(matchnumber,alliance){
 		var t7 = s.indexOf("notes");
 		var notes = s.substring(t7+8,s.length-10).toLowerCase();
 		if(notes.length > 70){
-			console.log(notes);
 			for(var i = 0; i+70 <= notes.length; i += 70){
 				notes = notes.substring(i,i+70) + "<br>" + notes.substring(i+70,notes.length);
 			}
-			console.log(notes);
 		}
 
 		if(typeof arr.find(x => x.teamnumber === teamnumber) === 'undefined'){
@@ -48,13 +47,16 @@ function getMatch(matchnumber,alliance){
 				"count": 1
 			}
 			arr.push(team);
+			priorNotes = notes;
 		} else{
 			var index = arr.findIndex(x => x.teamnumber === teamnumber);
 			arr[index]["autoscore"] = (parseInt(arr[index]["autoscore"]) + parseInt(autoscore)).toString();
 			arr[index]["driverscore"] = (parseInt(arr[index]["driverscore"]) + parseInt(driverscore)).toString();
 			arr[index]["endscore"] = (parseInt(arr[index]["endscore"]) + parseInt(endscore)).toString();
 			arr[index]["totalscore"] = (parseInt(arr[index]["totalscore"]) + parseInt(totalscore)).toString();
-			arr[index]["notes"] += "<br>"+notes;
+			if(priorNotes.length > 0) arr[index]["notes"] += "<br>"+notes;
+			else arr[index]["notes"] += notes;
+			priorNotes = notes;
 			arr[index]["count"]++;
 		}
 		return 0;
@@ -82,10 +84,10 @@ for(var i = 1; i < 300; i++){
 
 arr.sort(compare);
 for(var i = 0; i < arr.length; i++){
-	arr[i]["autoscore"] = (parseInt(arr[i]["autoscore"])/parseInt(arr[i]["count"])).toString();
-	arr[i]["driverscore"] = (parseInt(arr[i]["driverscore"])/parseInt(arr[i]["count"])).toString();
-	arr[i]["endscore"] = (parseInt(arr[i]["endscore"])/parseInt(arr[i]["count"])).toString();
-	arr[i]["totalscore"] = (parseInt(arr[i]["totalscore"])/parseInt(arr[i]["count"])).toString();
+	arr[i]["autoscore"] = (Math.round(parseInt(arr[i]["autoscore"])/parseInt(arr[i]["count"])*10)/10).toString();
+	arr[i]["driverscore"] = (Math.round(parseInt(arr[i]["driverscore"])/parseInt(arr[i]["count"])*10)/10).toString();
+	arr[i]["endscore"] = (Math.round(parseInt(arr[i]["endscore"])/parseInt(arr[i]["count"])*10)/10).toString();
+	arr[i]["totalscore"] = (Math.round(parseInt(arr[i]["totalscore"])/parseInt(arr[i]["count"])*10)/10).toString();
 }
 for(var i = 0; i < arr.length; i++){
 	if(i < 4){

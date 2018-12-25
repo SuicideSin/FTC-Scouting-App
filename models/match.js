@@ -39,7 +39,6 @@ var MatchSchema = new mongoose.Schema({
   },
   notes: {
     type: String,
-    required: true,
   }
 });
 
