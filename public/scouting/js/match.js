@@ -26,7 +26,6 @@ function getMatch(matchnumber,alliance){
 
 for(var i = 1; i < 300; i++){
 	var exit = 0;
-	str += '<tr><th>'+i+'</th>';
 	var n = getMatch(i,'r1');
 	if(n == 1) arr.push({"table": "", "totalscore": 0});
 	exit += n;
@@ -39,7 +38,9 @@ for(var i = 1; i < 300; i++){
 	n = getMatch(i,'b2');
 	if(n == 1) arr.push({"table": "", "totalscore": 0});
 	exit += n;
+	if(exit == 4) break;
 
+	str += '<tr><th>'+i+'</th>';
 	var red = arr[0]["totalscore"]+arr[1]["totalscore"];
 	var blue = arr[2]["totalscore"]+arr[3]["totalscore"];
 	if(red > blue){
@@ -49,10 +50,8 @@ for(var i = 1; i < 300; i++){
 	} else{
 		str += "<th>"+arr[0]["table"]+"</th><th>"+arr[1]["table"]+"</th><th>"+arr[2]["table"]+"</th><th>"+arr[3]["table"]+"</th>";
 	}
-
 	str += '</tr>';
 	arr = [];
-	if(exit == 4) break;
 }
 str += "</table>";
 data.innerHTML = str;

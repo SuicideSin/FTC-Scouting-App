@@ -82,13 +82,13 @@ for(var i = 1; i < 300; i++){
 	if(exit == 4) break;
 }
 
-arr.sort(compare);
 for(var i = 0; i < arr.length; i++){
 	arr[i]["autoscore"] = (Math.round(parseInt(arr[i]["autoscore"])/parseInt(arr[i]["count"])*10)/10).toString();
 	arr[i]["driverscore"] = (Math.round(parseInt(arr[i]["driverscore"])/parseInt(arr[i]["count"])*10)/10).toString();
 	arr[i]["endscore"] = (Math.round(parseInt(arr[i]["endscore"])/parseInt(arr[i]["count"])*10)/10).toString();
 	arr[i]["totalscore"] = (Math.round(parseInt(arr[i]["totalscore"])/parseInt(arr[i]["count"])*10)/10).toString();
 }
+arr.sort(compare);
 for(var i = 0; i < arr.length; i++){
 	if(i < 4){
 		str += "<tr><th>"+(i+1)+"</th><th bgcolor='yellow'>"+arr[i]["teamnumber"]+": "+arr[i]["teamname"]+"</th><th>"+arr[i]["totalscore"]+"</th><th>"+arr[i]["autoscore"]+"</th><th>"+arr[i]["driverscore"]+"</th><th>"+arr[i]["endscore"]+"</th><th>"+arr[i]["notes"]+"</th></tr>";
