@@ -17,135 +17,32 @@
 					<tr>
 						<th><b>Match Number</b></th>
 						<th><input type="text" name="matchnumber" placeholder="Match Number" required=""></th>
-						<th></th><th></th><th></th>
+					</tr>
+					<tr>
 						<th><b>Alliance (r1/r2/b1/b2)</b></th>
 						<th><input type="text" name="alliance" placeholder="Alliance (r1/r2/b1/b2)" required=""></th>
-						<th></th><th></th><th></th>
+					</tr>
+					<tr>
 						<th><b>Team Number</b></th>
 						<th><input type="text" name="teamnumber" placeholder="Team Number" required=""></th>
-						<th></th><th></th><th></th>
+					</tr>
+					<tr>
 						<th><b>Team Name</b></th>
 						<th><input type="text" name="teamname" placeholder="Team Name" required=""></th>
 					</tr>
-				</table>
-				<br><hr>
-				<table style="margin:1em auto">
-					<tr>
-						<th><div style="background-color:#9AE7C8"><b>AUTONOMOUS PERIOD</b></div></th>
-						<th><div style="background-color:#9AE7C8"><b>DRIVER-CONTROLLED PERIOD</b></div></th>
-						<th><div style="background-color:#9AE7C8"><b>END GAME PERIOD</b></div></th>
-					</tr>
-					<tr>
-						<th>
-							<table>
-								<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-								<tr>
-									<th>Landing?</th>
-									<th><input type="checkbox" id="auto-land"></th>
-								</tr>
-								<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-								<tr>
-									<th>Sampling?</th>
-									<th><input type="checkbox" id="auto-sampling"></th>	
-								</tr>
-								<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-								<tr>
-									<th>Team Marker?</th>
-									<th><input type="checkbox" id="auto-teammarker"></th>	
-								</tr>
-								<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-								<tr>
-									<th>Parking?</th>
-									<th><input type="checkbox" id="auto-park"></th>	
-								</tr>
-								<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-								<tr>
-									<th>Minerals in Cargo Holds? (number)</th>
-									<th><input type="number" id="auto-mincargo"></th>	
-								</tr>
-								<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-								<tr>
-									<th>Minerals in Depot? (number)</th>
-									<th><input type="number" id="auto-mindepot"></th>	
-								</tr>
-							</table>
-						</th>
-						<th>
-							<table>
-								<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-								<tr>
-									<th>Minerals in Cargo Holds? (number)</th>
-									<th><input type="number" id="driver-mincargo"></th>	
-								</tr>
-								<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-								<tr>
-									<th>Minerals in Depot? (number)</th>
-									<th><input type="number" id="driver-mindepot"></th>	
-								</tr>
-								<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-								<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-								<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-								<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-								<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-								<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-								<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-								<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-								<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-								<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-								<tr></tr><tr></tr>
-							</table>
-						</th>
-						<th>
-							<table>
-								<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-								<tr>
-									<th>Minerals in Cargo Holds? (number)</th>
-									<th><input type="number" id="endgame-mincargo"></th>	
-								</tr>
-								<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-								<tr>
-									<th>Minerals in Depot? (number)</th>
-									<th><input type="number" id="endgame-mindepot"></th>	
-								</tr>
-								<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-								<tr>
-									<th>Latching?</th>
-									<th><input type="checkbox" id="endgame-latch"></th>	
-								</tr>
-								<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-								<tr>
-									<th>Robot Completely In Crater?</th>
-									<th><input type="checkbox" id="endgame-cratercomplete"></th>	
-								</tr>
-								<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-								<tr>
-									<th>Robot In Crater?</th>
-									<th><input type="checkbox" id="endgame-crater"></th>	
-								</tr>
-								<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-								<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
-							</table>
-						</th>
-					</tr>
-				</table>
-				<div style="text-align:center">
-					<input type="button" onClick="calculate()" Value="Calculate" /><br><br>
-				</div>
-				<div style="text-align:center">
-					<div style="font-weight:bold;color:red;font-size:20px" id = "autoscoreE"></div><div "font-weight:bold;color:red;font-size:20px" id = "endscoreE"></div>
-				</div>
-				<hr>
-				<table style="margin:1em auto">
 					<tr>
 						<th><b>Autonomous Score</b></th>
 						<th><input type="text" id="autoscore" name="autoscore" placeholder="Autonomous Score" required=""></th>
-						<th></th><th></th><th></th>
+					</tr>
+					<tr>
 						<th><b>Driver-Controlled Score</b></th>
 						<th><input type="text" id="driverscore" name="driverscore" placeholder="Driver-Controlled Score" required=""></th>
-						<th></th><th></th><th></th>
+					</tr>
+					<tr>
 						<th><b>End Game Score</b></th>
 						<th><input type="text" id="endscore" name="endscore" placeholder="End Game Score" required=""></th>
-						<th></th><th></th><th></th>
+					</tr>
+					<tr>
 						<th><b>Total Score</b></th>
 						<th><input type="text" id="total" name="totalscore" placeholder="Total Score" required=""></th>
 					</tr>
@@ -156,6 +53,111 @@
 					<input type="submit" value="SUBMIT">
 				</div>
 			</form>
+		</div>
+		<table style="margin:1em auto">
+			<tr>
+				<th><div style="background-color:yellow"><b>AUTONOMOUS PERIOD</b></div></th>
+				<th><div style="background-color:yellow"><b>DRIVER-CONTROLLED PERIOD</b></div></th>
+				<th><div style="background-color:yellow"><b>END GAME PERIOD</b></div></th>
+			</tr>
+			<tr>
+				<th>
+					<table>
+						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+						<tr>
+							<th>Landing?</th>
+							<th><input type="checkbox" id="auto-land"></th>
+						</tr>
+						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+						<tr>
+							<th>Sampling?</th>
+							<th><input type="checkbox" id="auto-sampling"></th>	
+						</tr>
+						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+						<tr>
+							<th>Team Marker?</th>
+							<th><input type="checkbox" id="auto-teammarker"></th>	
+						</tr>
+						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+						<tr>
+							<th>Parking?</th>
+							<th><input type="checkbox" id="auto-park"></th>	
+						</tr>
+						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+						<tr>
+							<th>Minerals in Cargo Holds? (number)</th>
+							<th><input type="number" id="auto-mincargo"></th>	
+						</tr>
+						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+						<tr>
+							<th>Minerals in Depot? (number)</th>
+							<th><input type="number" id="auto-mindepot"></th>	
+						</tr>
+					</table>
+				</th>
+				<th>
+					<table>
+						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+						<tr>
+							<th>Minerals in Cargo Holds? (number)</th>
+							<th><input type="number" id="driver-mincargo"></th>	
+						</tr>
+						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+						<tr>
+							<th>Minerals in Depot? (number)</th>
+							<th><input type="number" id="driver-mindepot"></th>	
+						</tr>
+						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+						<tr></tr><tr></tr>
+					</table>
+				</th>
+				<th>
+					<table>
+						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+						<tr>
+							<th>Minerals in Cargo Holds? (number)</th>
+							<th><input type="number" id="endgame-mincargo"></th>	
+						</tr>
+						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+						<tr>
+							<th>Minerals in Depot? (number)</th>
+							<th><input type="number" id="endgame-mindepot"></th>	
+						</tr>
+						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+						<tr>
+							<th>Latching?</th>
+							<th><input type="checkbox" id="endgame-latch"></th>	
+						</tr>
+						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+						<tr>
+							<th>Robot Completely In Crater?</th>
+							<th><input type="checkbox" id="endgame-cratercomplete"></th>	
+						</tr>
+						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+						<tr>
+							<th>Robot In Crater?</th>
+							<th><input type="checkbox" id="endgame-crater"></th>	
+						</tr>
+						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+						<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+					</table>
+				</th>
+			</tr>
+		</table>
+		<div style="text-align:center">
+			<input type="button" onClick="calculate()" Value="Calculate" /><br><br>
+		</div>
+		<div style="text-align:center">
+			<div style="font-weight:bold;color:red;font-size:20px" id = "autoscoreE"></div><div "font-weight:bold;color:red;font-size:20px" id = "endscoreE"></div>
 		</div>
 	</body>
 	<script src="js/score.js"></script>
