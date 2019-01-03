@@ -1,5 +1,5 @@
 var data = document.getElementById('match');
-var str = "<table id='datatable'><tr><th>Match Number</th><th bgcolor='#EF3125'>Red 1</th><th bgcolor='#EF3125'>Red 2</th><th bgcolor='#1E59E0'>Blue 1</th><th bgcolor='#1E59E0'>Blue 2</th></tr>";
+var str = "<table id='datatable'><tr><th>Match Number</th><th style='background-color:#EF3125'>Red 1</th><th style='background-color:#EF3125'>Red 2</th><th style='background-color:#1E59E0'>Blue 1</th><th style='background-color:#1E59E0'>Blue 2</th></tr>";
 var arr = [];
 
 function getMatch(matchnumber,alliance){
@@ -44,7 +44,7 @@ for(var i = 1; i < 300; i++){
 	var red = arr[0]["totalscore"]+arr[1]["totalscore"];
 	var blue = arr[2]["totalscore"]+arr[3]["totalscore"];
 	if(red > blue){
-		str += "<th bgcolor='yellow'>"+arr[0]["table"]+"</th><th bgcolor='yellow'>"+arr[1]["table"]+"</th><th>"+arr[2]["table"]+"</th><th>"+arr[3]["table"]+"</th>";
+		str += "<th style='background-color:yellow'>"+arr[0]["table"]+"</th><th style='background-color:yellow'>"+arr[1]["table"]+"</th><th>"+arr[2]["table"]+"</th><th>"+arr[3]["table"]+"</th>";
 	} else if(blue > red){
 		str += "<th>"+arr[0]["table"]+"</th><th>"+arr[1]["table"]+"</th><th bgcolor='yellow'>"+arr[2]["table"]+"</th><th bgcolor='yellow'>"+arr[3]["table"]+"</th>";
 	} else{

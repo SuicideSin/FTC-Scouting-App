@@ -1,10 +1,11 @@
 body{
-    background-color: #6b7888;
+    background-color: #F7F7FF;
     font-family: sans-serif;
 }
 
 .navbar {
-  background-color: #333;
+  background-color: #05668D;
+  color: #FFFFFF;
   overflow: hidden;
 }
 
@@ -15,6 +16,7 @@ body{
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  font-weight: bold;
 }
 
 .navbar a:hover {
@@ -49,8 +51,10 @@ table, th, td {
 
 table {
   width: 100%;
+  background-color: black;
 }
 
 th {
   height: 30px;
+  background-color: white;
 }

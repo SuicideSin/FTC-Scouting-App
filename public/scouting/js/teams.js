@@ -91,7 +91,7 @@ for(var i = 0; i < arr.length; i++){
 arr.sort(compare);
 for(var i = 0; i < arr.length; i++){
 	if(i < 4){
-		str += "<tr><th>"+(i+1)+"</th><th bgcolor='yellow'>"+arr[i]["teamnumber"]+": "+arr[i]["teamname"]+"</th><th>"+arr[i]["totalscore"]+"</th><th>"+arr[i]["autoscore"]+"</th><th>"+arr[i]["driverscore"]+"</th><th>"+arr[i]["endscore"]+"</th><th>"+arr[i]["notes"]+"</th></tr>";
+		str += "<tr><th>"+(i+1)+"</th><th style='background-color:yellow'>"+arr[i]["teamnumber"]+": "+arr[i]["teamname"]+"</th><th>"+arr[i]["totalscore"]+"</th><th>"+arr[i]["autoscore"]+"</th><th>"+arr[i]["driverscore"]+"</th><th>"+arr[i]["endscore"]+"</th><th>"+arr[i]["notes"]+"</th></tr>";
 	} else{
 		str += "<tr><th>"+(i+1)+"</th><th>"+arr[i]["teamnumber"]+": "+arr[i]["teamname"]+"</th><th>"+arr[i]["totalscore"]+"</th><th>"+arr[i]["autoscore"]+"</th><th>"+arr[i]["driverscore"]+"</th><th>"+arr[i]["endscore"]+"</th><th>"+arr[i]["notes"]+"</th></tr>";
 	}

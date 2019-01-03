@@ -1,0 +1,51 @@
+body{
+    background-color: #F7F7FF;
+    font-family: sans-serif;
+    background-image: url("../images/background.jpg");
+    background-size: 1600px 800px;
+}
+
+.main{
+	text-align: center;
+	color:#FFFFFF;
+	vertical-align: middle;
+	margin: auto;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.navbar {
+  background-color: #000000;
+  color: #FFFFFF;
+  overflow: hidden;
+  opacity: 0.5;
+}
+
+.navbar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#navright{
+    float: right;
+}
+
+h1+h2{ margin-top: -30px; }
